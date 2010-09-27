@@ -1,1 +1,1 @@
-README
+# Simple solution for integrating ExtJs clients with Seam based servers.
