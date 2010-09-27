@@ -140,7 +140,7 @@ Ext.extend(Ext.ux.data.SeamRemotingJsonReader, Ext.data.JsonReader, {
      * This override simply accounts for the need to create a response object with a responseText
      * property a la (XHR). 
      *
-     * If the success indicator is false throw an exception.
+     * If there was an exception on the server side throw an exception.
      *
      * @param {Object} response The Seam Remoting object which contains the JSON data in its responseText.
      * @return {Object} data A data block which is used by an Ext.data.Store object as
@@ -150,7 +150,7 @@ Ext.extend(Ext.ux.data.SeamRemotingJsonReader, Ext.data.JsonReader, {
         var json = Ext.decode(response);
         if (json.exception) {
             throw {
-                message: 'SeamRemotiingJsonReader.read: Exception raised on server.'
+                message: 'SeamRemotingJsonReader.read: Exception raised on server.'
             };      
         }
     
